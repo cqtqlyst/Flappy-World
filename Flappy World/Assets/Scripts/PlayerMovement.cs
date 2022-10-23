@@ -12,9 +12,15 @@ public class PlayerMovement : MonoBehaviour
     public float upForce = 50f;
     private bool jump;
     private bool canJump = true;
+    public float horizontalForce = 50f;
+    private float horizontalMove;
+    public Animator animator;
+
 
     void Start()
     {
+
+        //timer stuff
         Timer = new Timer(millisecondsBetweenJumps);
         Timer.Elapsed += Timer_Elapsed;
         Timer.Enabled = true;
@@ -42,18 +48,23 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
+
+        animator.SetBool("isJumping", jump);
+
+        horizontalMove = Input.GetAxisRaw("Horizontal") * horizontalForce;
+
     }
-
-
     void FixedUpdate()
     {
     
         if (jump && canJump)
         {
-            rb.AddForce(new Vector2(0, upForce));
+            rb.AddForce(new Vector2(0, upForce * Time.deltaTime));
             jump = false;
             canJump = false;
         }
+
+        rb.AddForce(new Vector2(horizontalMove * Time.deltaTime, 0));
         
     }
 }

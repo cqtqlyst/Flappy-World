@@ -7,11 +7,11 @@ public class PlayerCollision : MonoBehaviour
 {
     public PlayerMovement movement;
 
-    private void OnCollisionEnter(Collision collisionInfo)
+    private void OnCollisionEnter2D(Collision2D collisionInfo)
     {
         if (collisionInfo.collider.tag == "Platform")
         {
-            Debug.Log("We have hit a platform!");
+            // Debug.Log("We have hit a platform!");
 
             movement.enabled = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

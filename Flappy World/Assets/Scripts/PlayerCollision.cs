@@ -16,5 +16,11 @@ public class PlayerCollision : MonoBehaviour
             movement.enabled = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (collisionInfo.collider.tag == "LevelEnd") 
+        {
+            Debug.Log("Level should end now!");
+
+        }
     }
 }

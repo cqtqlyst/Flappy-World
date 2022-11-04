@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private bool jump;
     private bool canJump = true;
     public float horizontalForce = 50f;
-    private float horizontalMove;
+    public float horizontalMove;
     public Animator animator;
 
 

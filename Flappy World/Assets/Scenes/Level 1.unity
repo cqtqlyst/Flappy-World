@@ -627,6 +627,7 @@ GameObject:
   - component: {fileID: 1206065272}
   - component: {fileID: 1206065270}
   - component: {fileID: 1206065273}
+  - component: {fileID: 1206065274}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -736,6 +737,7 @@ MonoBehaviour:
   rb: {fileID: 1206065267}
   upForce: 13000
   horizontalForce: 300
+  horizontalMove: 0
   animator: {fileID: 1206065272}
 --- !u!61 &1206065271
 BoxCollider2D:
@@ -795,6 +797,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1206065270}
+--- !u!114 &1206065274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206065266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca156048da57e440992d4838dc375ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 1206065270}
+  player: {fileID: 1206065269}
 --- !u!4 &1297211516 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1819812668026354391, guid: 38f6452d6f405014b806b328d102649a, type: 3}

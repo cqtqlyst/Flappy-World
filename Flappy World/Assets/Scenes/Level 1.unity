@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1206065270}
-  player: {fileID: 1206065269}
+  transform: {fileID: 1206065269}
 --- !u!4 &1297211516 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1819812668026354391, guid: 38f6452d6f405014b806b328d102649a, type: 3}
